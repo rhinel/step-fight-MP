@@ -10,7 +10,6 @@ Page({
   onLoad() {
     let that = this
     app.getUserInfo((userInfo) => {
-      // 更新数据
       that.setData({
         userInfo: userInfo,
         loading: false

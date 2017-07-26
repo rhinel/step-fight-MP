@@ -33,14 +33,14 @@ App({
       })
     }
   },
-  getLogin (code) {
+  getLogin(code) {
     return new Promise((resolve, reject) => {
       ajax('/wchat/getLogin', code, (res) => {
         resolve(res.data.data)
       })
     })
   },
-  getUserInfoAfL () {
+  getUserInfoAfL() {
     return new Promise((resolve, reject) => {
       wx.getUserInfo({
         success(res) {
@@ -77,8 +77,8 @@ App({
         success(res) {
           res.session_key = that.globalData.userInfo.session_key
           ajax('/wchat/getEncryptedData', res, (res) => {
-            that.globalData.userSteps = res
-            typeof cb == "function" && cb(res)
+            that.globalData.userSteps = res.data.data
+            typeof cb == "function" && cb(res.data.data)
           })
         }
       })

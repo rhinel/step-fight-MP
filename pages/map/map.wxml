@@ -7,6 +7,7 @@
     longitude="{{center.longitude}}"
     latitude="{{center.latitude}}"
     bindcontroltap="controltap"
+    bindregionchange="regionchange"
     controls="{{controls}}"
     markers="{{markers}}"
     circles="{{circles}}"
