@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container index">
+  <view class="userinfo">
+    <view class="u-l">
+      <image
+        class="userinfo-avatar"
+        src="{{userInfo.avatarUrl}}"
+        mode="aspectFill">
+      </image>
+    </view>
+    <view class="u-r">
+      <view class="userinfo-nickname">
+        挑战者：{{userInfo.nickName}}
+      </view>
+    </view>
+  </view>
+  <view class="explain">
+    <text>挑战者说明：
+      获取定位信息及微信步数</text>
+  </view>
+  <view class="btn">
+    <button
+      type="primary"
+      bindtap="enter"
+      loading="{{loading}}"
+      disabled="{{loading}}">
+      进入挑战
+    </button>
+  </view>
+</view>

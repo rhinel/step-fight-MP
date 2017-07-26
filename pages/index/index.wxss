@@ -1,0 +1,43 @@
+/**index.wxss**/
+
+.index {
+  padding-top: 100rpx;
+  box-sizing: border-box;
+}
+
+.userinfo {
+  background-color: #f2f2f2;
+  display: flex;
+  margin: 20rpx;
+  box-shadow: 0 4rpx 12rpx 0 rgba(177, 181, 193, 0.43);
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  margin: 20rpx;
+  line-height: 128rpx;
+}
+
+.explain {
+  margin: 20rpx;
+  padding-top: 20rpx;
+}
+
+.explain text {
+  line-height: 0.5;
+}
+
+.btn {
+  margin: 20rpx;
+  padding-top: 20rpx;
+}
+
+.btn button {
+  box-shadow: 0 4rpx 12rpx 0 rgba(26, 173, 25, 0.43);
+}
