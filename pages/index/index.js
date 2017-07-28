@@ -14,6 +14,7 @@ Page({
         userInfo: userInfo,
         loading: false
       })
+      // 上报用户信息
     })
   },
   // 生命周期函数--上拉触底事件的处理函数

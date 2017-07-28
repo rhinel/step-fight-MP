@@ -1,2 +1,27 @@
 <!--steps.wxml-->
-<text>steps.wxml</text>
+<view class="container steps">
+  <view class="weui-navbar">
+    <block wx:for="{{tabs}}" wx:key="*this">
+      <view id="{{index}}"
+        class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}"
+        bindtap="tabClick">
+        <view class="weui-navbar__title">{{item}}</view>
+      </view>
+    </block>
+    <view class="weui-navbar__slider"
+      style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);">
+    </view>
+  </view>
+  <view class="weui-tab__panel">
+    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+      <view class="step" wx:for="{{userInfo.step.stepInfoList}}" wx:key="index">
+        <view class="cell">{{item.timestamp}}</view>
+        <view class="cell">{{item.step}}</view>
+      </view>
+    </view>
+    <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+    </view>
+    <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+    </view>
+  </view>
+</view>

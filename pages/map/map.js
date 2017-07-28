@@ -99,21 +99,21 @@ Page({
     wx.getLocation({
       type: 'gcj02',
       success(res) {
-        let circle = {
-          latitude: res.latitude,
-          longitude: res.longitude,
-          fillColor: '#FFD7003C',
-          radius: 200
-        }
-        let setData = {
-          'locationInfo': res,
-          'circles': [circle]
-        }
         if (that.data.center.latitude === 0) {
-          setData['center.latitude'] = res.latitude
-          setData['center.longitude'] = res.longitude
+          that.setData({
+            'locationInfo': res,
+            'center.latitude': res.latitude,
+            'center.longitude': res.longitude,
+            'circles': [{
+              latitude: res.latitude,
+              longitude: res.longitude,
+              fillColor: '#FFD7003C',
+              radius: 200
+            }]
+          })
         }
-        that.setData(setData)
+        // 上报地理位置
+        // that.getLocation()
       }
     })
   },
